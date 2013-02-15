@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>POPSUGAR Shopping API example</title>
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+    </head>
+    <body>
+        <section id="main" role="main">
+            <h1>
+                Search POPSUGAR Shopping
+            </h1>
+            <form action="/" method="GET">
+                <input type="text" placeholder="Search millions of products..." value="<%= @search %>" name="s" />
+                <input type="submit" value="GO!" style=""/>
+            </form>
+            <% if @products.length > 0 %>
+                <section id="search-results">
+                    <h2>Search results for <%= @search %></h2>
+                    <ul>
+
+                    <% @products.each do |p| %>
+                        <li>
+                            <div class="product-image" style="background-image: url('<%= p['image']['url'] %>');" >
+                            </div>
+                            <div class="product-title"><%= p['name'] %></div>
+                        </li>
+                    <% end %>
+
+                    </ul>
+                </section>
+            <% end %>
+        </section>
+    </body>
+</html>

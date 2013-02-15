@@ -1,0 +1,29 @@
+GIT
+  remote: git://github.com/PopSugar/ruby-popsugar-shopping-api.git
+  revision: b749f31e1c7d61b6df2ae408cbe0e3bc4b138c0d
+  branch: pk/api-v2
+  specs:
+    shopsense-ruby (0.2.1)
+      yajl-ruby
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    json (1.7.4)
+    rack (1.4.1)
+    rack-protection (1.3.2)
+      rack
+    sinatra (1.3.4)
+      rack (~> 1.4)
+      rack-protection (~> 1.3)
+      tilt (~> 1.3, >= 1.3.3)
+    tilt (1.3.3)
+    yajl-ruby (1.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  json
+  shopsense-ruby!
+  sinatra
